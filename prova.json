@@ -1,0 +1,592 @@
+{
+	"info": {
+		"_postman_id": "2ace9809-bbeb-4ed7-a6cd-6e26753d7194",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25562997",
+		"_collection_link": "https://winter-spaceship-671431.postman.co/workspace/senai~b85ddb8a-1c95-4816-a8bb-457173a5d101/collection/25562997-2ace9809-bbeb-4ed7-a6cd-6e26753d7194?action=share&source=collection_link&creator=25562997"
+	},
+	"item": [
+		{
+			"name": "employee",
+			"item": [
+				{
+					"name": "adicionar funcionario",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FwaS1wcm92YS1mbHV0dGVyLmNvbS9pc3N1ZXIiLCJ1cG4iOiJqdWxpby5iLnRlc3RlMiIsImdyb3VwcyI6WyJBZG1pbiJdLCJpYXQiOjE3NDUzNTUwMjEsImV4cCI6MTc0Nzk0NzAyMSwianRpIjoiMzBiYWFkN2YtZGRlNy00NWM3LTkzZmUtZjNmYWExOTFkYjNjIn0.LXsuBY5gsBDr7WB8wWXcFuwAmfKThkmkSeP7420Mi9tAmkP0aQSMwkVWXEulf3a9UAoB4TCKkkLRcm1WZdFKNZ3T2983CC2WBxSEl01o4zhpq1E8zcj14_ozxKhf9RmZnBaVEF6A5KEC3OkqtQ38sVit-Kt9ZSnfYkpSHefnxM8p4k2nLJOCdJu8D1h4TSDz1svu-U8vE3SWqBM7Zou1oxHt4hN5MNtsxJq54f4l_qTEzwd4GkDpdsgd78gaaRLuJsZ08nai_jqAGXemR1khsQM1J-YXhQSc-ZloTmeWe2MELk9wq5F7GLAwRGGx3ZPSpl1sdgu70N7PHOEFhaH72g",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Novo Funcionario\",\n    \"photo\": \"BASE64_DO_FUNCIONARIO_AQUI\",\n    \"username\": \"novo.funcionario\",\n    \"password\": \"senhaDoFuncionario\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api-flutter-prova.hml.sesisenai.org.br/v1/store/700/employee",
+							"protocol": "https",
+							"host": [
+								"api-flutter-prova",
+								"hml",
+								"sesisenai",
+								"org",
+								"br"
+							],
+							"path": [
+								"v1",
+								"store",
+								"700",
+								"employee"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Funcionários",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FwaS1wcm92YS1mbHV0dGVyLmNvbS9pc3N1ZXIiLCJ1cG4iOiJqdWxpby5iLnRlc3RlMiIsImdyb3VwcyI6WyJBZG1pbiJdLCJpYXQiOjE3NDUzNTUwMjEsImV4cCI6MTc0Nzk0NzAyMSwianRpIjoiMzBiYWFkN2YtZGRlNy00NWM3LTkzZmUtZjNmYWExOTFkYjNjIn0.LXsuBY5gsBDr7WB8wWXcFuwAmfKThkmkSeP7420Mi9tAmkP0aQSMwkVWXEulf3a9UAoB4TCKkkLRcm1WZdFKNZ3T2983CC2WBxSEl01o4zhpq1E8zcj14_ozxKhf9RmZnBaVEF6A5KEC3OkqtQ38sVit-Kt9ZSnfYkpSHefnxM8p4k2nLJOCdJu8D1h4TSDz1svu-U8vE3SWqBM7Zou1oxHt4hN5MNtsxJq54f4l_qTEzwd4GkDpdsgd78gaaRLuJsZ08nai_jqAGXemR1khsQM1J-YXhQSc-ZloTmeWe2MELk9wq5F7GLAwRGGx3ZPSpl1sdgu70N7PHOEFhaH72g",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    {\n        \"id\": ...,\n        \"name\": \"Novo Funcionario\",\n        \"photo\": \"BASE64_DO_FUNCIONARIO_AQUI\",\n        \"username\": \"novo.funcionario\"\n    }\n    // Outros funcionários, se houver\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api-flutter-prova.hml.sesisenai.org.br/v1/store/700/employee",
+							"protocol": "https",
+							"host": [
+								"api-flutter-prova",
+								"hml",
+								"sesisenai",
+								"org",
+								"br"
+							],
+							"path": [
+								"v1",
+								"store",
+								"700",
+								"employee"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar Funcionário",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FwaS1wcm92YS1mbHV0dGVyLmNvbS9pc3N1ZXIiLCJ1cG4iOiJqdWxpby5iLnRlc3RlMiIsImdyb3VwcyI6WyJBZG1pbiJdLCJpYXQiOjE3NDUzNTUwMjEsImV4cCI6MTc0Nzk0NzAyMSwianRpIjoiMzBiYWFkN2YtZGRlNy00NWM3LTkzZmUtZjNmYWExOTFkYjNjIn0.LXsuBY5gsBDr7WB8wWXcFuwAmfKThkmkSeP7420Mi9tAmkP0aQSMwkVWXEulf3a9UAoB4TCKkkLRcm1WZdFKNZ3T2983CC2WBxSEl01o4zhpq1E8zcj14_ozxKhf9RmZnBaVEF6A5KEC3OkqtQ38sVit-Kt9ZSnfYkpSHefnxM8p4k2nLJOCdJu8D1h4TSDz1svu-U8vE3SWqBM7Zou1oxHt4hN5MNtsxJq54f4l_qTEzwd4GkDpdsgd78gaaRLuJsZ08nai_jqAGXemR1khsQM1J-YXhQSc-ZloTmeWe2MELk9wq5F7GLAwRGGx3ZPSpl1sdgu70N7PHOEFhaH72g",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Funcionário Atualizado\",\n    \"photo\": \"NOVA_BASE64_DO_FUNCIONARIO_AQUI\",\n    \"username\": \"funcionario.atualizado\",\n    \"password\": \"novaSenhaDoFuncionario\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api-flutter-prova.hml.sesisenai.org.br/v1/store/700/employee/824",
+							"protocol": "https",
+							"host": [
+								"api-flutter-prova",
+								"hml",
+								"sesisenai",
+								"org",
+								"br"
+							],
+							"path": [
+								"v1",
+								"store",
+								"700",
+								"employee",
+								"824"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FwaS1wcm92YS1mbHV0dGVyLmNvbS9pc3N1ZXIiLCJ1cG4iOiJqdWxpby5iLnRlc3RlMiIsImdyb3VwcyI6WyJBZG1pbiJdLCJpYXQiOjE3NDUzNTUwMjEsImV4cCI6MTc0Nzk0NzAyMSwianRpIjoiMzBiYWFkN2YtZGRlNy00NWM3LTkzZmUtZjNmYWExOTFkYjNjIn0.LXsuBY5gsBDr7WB8wWXcFuwAmfKThkmkSeP7420Mi9tAmkP0aQSMwkVWXEulf3a9UAoB4TCKkkLRcm1WZdFKNZ3T2983CC2WBxSEl01o4zhpq1E8zcj14_ozxKhf9RmZnBaVEF6A5KEC3OkqtQ38sVit-Kt9ZSnfYkpSHefnxM8p4k2nLJOCdJu8D1h4TSDz1svu-U8vE3SWqBM7Zou1oxHt4hN5MNtsxJq54f4l_qTEzwd4GkDpdsgd78gaaRLuJsZ08nai_jqAGXemR1khsQM1J-YXhQSc-ZloTmeWe2MELk9wq5F7GLAwRGGx3ZPSpl1sdgu70N7PHOEFhaH72g",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://api-flutter-prova.hml.sesisenai.org.br/v1/store/700/employee/824",
+							"protocol": "https",
+							"host": [
+								"api-flutter-prova",
+								"hml",
+								"sesisenai",
+								"org",
+								"br"
+							],
+							"path": [
+								"v1",
+								"store",
+								"700",
+								"employee",
+								"824"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "livros",
+			"item": [
+				{
+					"name": "Seacher",
+					"item": [
+						{
+							"name": "New Request",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FwaS1wcm92YS1mbHV0dGVyLmNvbS9pc3N1ZXIiLCJ1cG4iOiJqdWxpby5iLnRlc3RlMiIsImdyb3VwcyI6WyJBZG1pbiJdLCJpYXQiOjE3NDUzNTUwMjEsImV4cCI6MTc0Nzk0NzAyMSwianRpIjoiMzBiYWFkN2YtZGRlNy00NWM3LTkzZmUtZjNmYWExOTFkYjNjIn0.LXsuBY5gsBDr7WB8wWXcFuwAmfKThkmkSeP7420Mi9tAmkP0aQSMwkVWXEulf3a9UAoB4TCKkkLRcm1WZdFKNZ3T2983CC2WBxSEl01o4zhpq1E8zcj14_ozxKhf9RmZnBaVEF6A5KEC3OkqtQ38sVit-Kt9ZSnfYkpSHefnxM8p4k2nLJOCdJu8D1h4TSDz1svu-U8vE3SWqBM7Zou1oxHt4hN5MNtsxJq54f4l_qTEzwd4GkDpdsgd78gaaRLuJsZ08nai_jqAGXemR1khsQM1J-YXhQSc-ZloTmeWe2MELk9wq5F7GLAwRGGx3ZPSpl1sdgu70N7PHOEFhaH72g",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://api-flutter-prova.hml.sesisenai.org.br/v1/store/700/book?limit=20&offset=20&author=Seu Nome Atualizado&title=Guia Avançado& year-start=2026&year-finish=2026&rating =4&available=false",
+									"protocol": "https",
+									"host": [
+										"api-flutter-prova",
+										"hml",
+										"sesisenai",
+										"org",
+										"br"
+									],
+									"path": [
+										"v1",
+										"store",
+										"700",
+										"book"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": "20"
+										},
+										{
+											"key": "offset",
+											"value": "20"
+										},
+										{
+											"key": "author",
+											"value": "Seu Nome Atualizado"
+										},
+										{
+											"key": "title",
+											"value": "Guia Avançado"
+										},
+										{
+											"key": " year-start",
+											"value": "2026"
+										},
+										{
+											"key": "year-finish",
+											"value": "2026"
+										},
+										{
+											"key": "rating ",
+											"value": "4"
+										},
+										{
+											"key": "available",
+											"value": "false"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Adicionar Livro)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FwaS1wcm92YS1mbHV0dGVyLmNvbS9pc3N1ZXIiLCJ1cG4iOiJqdWxpby5iLnRlc3RlMiIsImdyb3VwcyI6WyJBZG1pbiJdLCJpYXQiOjE3NDUzNTUwMjEsImV4cCI6MTc0Nzk0NzAyMSwianRpIjoiMzBiYWFkN2YtZGRlNy00NWM3LTkzZmUtZjNmYWExOTFkYjNjIn0.LXsuBY5gsBDr7WB8wWXcFuwAmfKThkmkSeP7420Mi9tAmkP0aQSMwkVWXEulf3a9UAoB4TCKkkLRcm1WZdFKNZ3T2983CC2WBxSEl01o4zhpq1E8zcj14_ozxKhf9RmZnBaVEF6A5KEC3OkqtQ38sVit-Kt9ZSnfYkpSHefnxM8p4k2nLJOCdJu8D1h4TSDz1svu-U8vE3SWqBM7Zou1oxHt4hN5MNtsxJq54f4l_qTEzwd4GkDpdsgd78gaaRLuJsZ08nai_jqAGXemR1khsQM1J-YXhQSc-ZloTmeWe2MELk9wq5F7GLAwRGGx3ZPSpl1sdgu70N7PHOEFhaH72g",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"cover\": \"BASE64_DA_CAPA_AQUI\",\n    \"title\": \"O Guia do Teste de API\",\n    \"author\": \"Seu Nome\",\n    \"synopsis\": \"Um guia completo para testar APIs RESTful.\",\n    \"year\": 2025,\n    \"rating\": 5,\n    \"available\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api-flutter-prova.hml.sesisenai.org.br/v1/store/700/book",
+							"protocol": "https",
+							"host": [
+								"api-flutter-prova",
+								"hml",
+								"sesisenai",
+								"org",
+								"br"
+							],
+							"path": [
+								"v1",
+								"store",
+								"700",
+								"book"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar Livro",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FwaS1wcm92YS1mbHV0dGVyLmNvbS9pc3N1ZXIiLCJ1cG4iOiJqdWxpby5iLnRlc3RlMiIsImdyb3VwcyI6WyJBZG1pbiJdLCJpYXQiOjE3NDUzNTUwMjEsImV4cCI6MTc0Nzk0NzAyMSwianRpIjoiMzBiYWFkN2YtZGRlNy00NWM3LTkzZmUtZjNmYWExOTFkYjNjIn0.LXsuBY5gsBDr7WB8wWXcFuwAmfKThkmkSeP7420Mi9tAmkP0aQSMwkVWXEulf3a9UAoB4TCKkkLRcm1WZdFKNZ3T2983CC2WBxSEl01o4zhpq1E8zcj14_ozxKhf9RmZnBaVEF6A5KEC3OkqtQ38sVit-Kt9ZSnfYkpSHefnxM8p4k2nLJOCdJu8D1h4TSDz1svu-U8vE3SWqBM7Zou1oxHt4hN5MNtsxJq54f4l_qTEzwd4GkDpdsgd78gaaRLuJsZ08nai_jqAGXemR1khsQM1J-YXhQSc-ZloTmeWe2MELk9wq5F7GLAwRGGx3ZPSpl1sdgu70N7PHOEFhaH72g",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"cover\": \"NOVA_BASE64_DA_CAPA_AQUI\",\n    \"title\": \"O Guia Avançado do Teste de API\",\n    \"author\": \"Seu Nome Atualizado\",\n    \"synopsis\": \"Um guia ainda mais completo e avançado para testar APIs RESTful.\",\n    \"year\": 2026,\n    \"rating\": 4.5,\n    \"available\": false\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api-flutter-prova.hml.sesisenai.org.br/v1/store/700/book/585",
+							"protocol": "https",
+							"host": [
+								"api-flutter-prova",
+								"hml",
+								"sesisenai",
+								"org",
+								"br"
+							],
+							"path": [
+								"v1",
+								"store",
+								"700",
+								"book",
+								"585"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "pegar detalhe livro",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FwaS1wcm92YS1mbHV0dGVyLmNvbS9pc3N1ZXIiLCJ1cG4iOiJqdWxpby5iLnRlc3RlMiIsImdyb3VwcyI6WyJBZG1pbiJdLCJpYXQiOjE3NDUzNTUwMjEsImV4cCI6MTc0Nzk0NzAyMSwianRpIjoiMzBiYWFkN2YtZGRlNy00NWM3LTkzZmUtZjNmYWExOTFkYjNjIn0.LXsuBY5gsBDr7WB8wWXcFuwAmfKThkmkSeP7420Mi9tAmkP0aQSMwkVWXEulf3a9UAoB4TCKkkLRcm1WZdFKNZ3T2983CC2WBxSEl01o4zhpq1E8zcj14_ozxKhf9RmZnBaVEF6A5KEC3OkqtQ38sVit-Kt9ZSnfYkpSHefnxM8p4k2nLJOCdJu8D1h4TSDz1svu-U8vE3SWqBM7Zou1oxHt4hN5MNtsxJq54f4l_qTEzwd4GkDpdsgd78gaaRLuJsZ08nai_jqAGXemR1khsQM1J-YXhQSc-ZloTmeWe2MELk9wq5F7GLAwRGGx3ZPSpl1sdgu70N7PHOEFhaH72g",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://api-flutter-prova.hml.sesisenai.org.br/v1/store/700/book/585",
+							"protocol": "https",
+							"host": [
+								"api-flutter-prova",
+								"hml",
+								"sesisenai",
+								"org",
+								"br"
+							],
+							"path": [
+								"v1",
+								"store",
+								"700",
+								"book",
+								"585"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FwaS1wcm92YS1mbHV0dGVyLmNvbS9pc3N1ZXIiLCJ1cG4iOiJqdWxpby5iLnRlc3RlMiIsImdyb3VwcyI6WyJBZG1pbiJdLCJpYXQiOjE3NDUzNTUwMjEsImV4cCI6MTc0Nzk0NzAyMSwianRpIjoiMzBiYWFkN2YtZGRlNy00NWM3LTkzZmUtZjNmYWExOTFkYjNjIn0.LXsuBY5gsBDr7WB8wWXcFuwAmfKThkmkSeP7420Mi9tAmkP0aQSMwkVWXEulf3a9UAoB4TCKkkLRcm1WZdFKNZ3T2983CC2WBxSEl01o4zhpq1E8zcj14_ozxKhf9RmZnBaVEF6A5KEC3OkqtQ38sVit-Kt9ZSnfYkpSHefnxM8p4k2nLJOCdJu8D1h4TSDz1svu-U8vE3SWqBM7Zou1oxHt4hN5MNtsxJq54f4l_qTEzwd4GkDpdsgd78gaaRLuJsZ08nai_jqAGXemR1khsQM1J-YXhQSc-ZloTmeWe2MELk9wq5F7GLAwRGGx3ZPSpl1sdgu70N7PHOEFhaH72g",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://api-flutter-prova.hml.sesisenai.org.br/v1/store/700/book/585",
+							"protocol": "https",
+							"host": [
+								"api-flutter-prova",
+								"hml",
+								"sesisenai",
+								"org",
+								"br"
+							],
+							"path": [
+								"v1",
+								"store",
+								"700",
+								"book",
+								"585"
+							],
+							"query": [
+								{
+									"key": "Authorization",
+									"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FwaS1wcm92YS1mbHV0dGVyLmNvbS9pc3N1ZXIiLCJ1cG4iOiJqdWxpby5iLnRlc3RlMiIsImdyb3VwcyI6WyJBZG1pbiJdLCJpYXQiOjE3NDUzNTUwMjEsImV4cCI6MTc0Nzk0NzAyMSwianRpIjoiMzBiYWFkN2YtZGRlNy00NWM3LTkzZmUtZjNmYWExOTFkYjNjIn0.LXsuBY5gsBDr7WB8wWXcFuwAmfKThkmkSeP7420Mi9tAmkP0aQSMwkVWXEulf3a9UAoB4TCKkkLRcm1WZdFKNZ3T2983CC2WBxSEl01o4zhpq1E8zcj14_ozxKhf9RmZnBaVEF6A5KEC3OkqtQ38sVit-Kt9ZSnfYkpSHefnxM8p4k2nLJOCdJu8D1h4TSDz1svu-U8vE3SWqBM7Zou1oxHt4hN5MNtsxJq54f4l_qTEzwd4GkDpdsgd78gaaRLuJsZ08nai_jqAGXemR1khsQM1J-YXhQSc-ZloTmeWe2MELk9wq5F7GLAwRGGx3ZPSpl1sdgu70N7PHOEFhaH72g",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "login(auth)",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"user\": \"julio.bitencourt\",\n  \"password\": \"8ec4sJ7dx!*d\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api-flutter-prova.hml.sesisenai.org.br/v1/auth",
+							"protocol": "https",
+							"host": [
+								"api-flutter-prova",
+								"hml",
+								"sesisenai",
+								"org",
+								"br"
+							],
+							"path": [
+								"v1",
+								"auth"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "livro_admin",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "loja",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Minha Lojinha Teste\",\n    \"slogan\": \"A melhor lojinha de teste!\",\n    \"banner\": \"SUA_BASE64_AQUI\",\n    \"admin\": {\n        \"name\": \"Julio Bitencourt Teste\",\n        \"photo\": \"OUTRA_BASE64_AQUI\",\n        \"username\": \"julio.b.teste2\",\n        \"password\": \"8ec4sJ7dx!*d\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api-flutter-prova.hml.sesisenai.org.br/v1/store",
+					"protocol": "https",
+					"host": [
+						"api-flutter-prova",
+						"hml",
+						"sesisenai",
+						"org",
+						"br"
+					],
+					"path": [
+						"v1",
+						"store"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "loja",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FwaS1wcm92YS1mbHV0dGVyLmNvbS9pc3N1ZXIiLCJ1cG4iOiJqdWxpby5iLnRlc3RlMiIsImdyb3VwcyI6WyJBZG1pbiJdLCJpYXQiOjE3NDUzNTUwMjEsImV4cCI6MTc0Nzk0NzAyMSwianRpIjoiMzBiYWFkN2YtZGRlNy00NWM3LTkzZmUtZjNmYWExOTFkYjNjIn0.LXsuBY5gsBDr7WB8wWXcFuwAmfKThkmkSeP7420Mi9tAmkP0aQSMwkVWXEulf3a9UAoB4TCKkkLRcm1WZdFKNZ3T2983CC2WBxSEl01o4zhpq1E8zcj14_ozxKhf9RmZnBaVEF6A5KEC3OkqtQ38sVit-Kt9ZSnfYkpSHefnxM8p4k2nLJOCdJu8D1h4TSDz1svu-U8vE3SWqBM7Zou1oxHt4hN5MNtsxJq54f4l_qTEzwd4GkDpdsgd78gaaRLuJsZ08nai_jqAGXemR1khsQM1J-YXhQSc-ZloTmeWe2MELk9wq5F7GLAwRGGx3ZPSpl1sdgu70N7PHOEFhaH72g",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://api-flutter-prova.hml.sesisenai.org.br/v1/store/1",
+					"protocol": "https",
+					"host": [
+						"api-flutter-prova",
+						"hml",
+						"sesisenai",
+						"org",
+						"br"
+					],
+					"path": [
+						"v1",
+						"store",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obter Detalhes da Loja",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FwaS1wcm92YS1mbHV0dGVyLmNvbS9pc3N1ZXIiLCJ1cG4iOiJqdWxpby5iLnRlc3RlMiIsImdyb3VwcyI6WyJBZG1pbiJdLCJpYXQiOjE3NDUzNTUwMjEsImV4cCI6MTc0Nzk0NzAyMSwianRpIjoiMzBiYWFkN2YtZGRlNy00NWM3LTkzZmUtZjNmYWExOTFkYjNjIn0.LXsuBY5gsBDr7WB8wWXcFuwAmfKThkmkSeP7420Mi9tAmkP0aQSMwkVWXEulf3a9UAoB4TCKkkLRcm1WZdFKNZ3T2983CC2WBxSEl01o4zhpq1E8zcj14_ozxKhf9RmZnBaVEF6A5KEC3OkqtQ38sVit-Kt9ZSnfYkpSHefnxM8p4k2nLJOCdJu8D1h4TSDz1svu-U8vE3SWqBM7Zou1oxHt4hN5MNtsxJq54f4l_qTEzwd4GkDpdsgd78gaaRLuJsZ08nai_jqAGXemR1khsQM1J-YXhQSc-ZloTmeWe2MELk9wq5F7GLAwRGGx3ZPSpl1sdgu70N7PHOEFhaH72g",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://api-flutter-prova.hml.sesisenai.org.br/v1/store/700",
+					"protocol": "https",
+					"host": [
+						"api-flutter-prova",
+						"hml",
+						"sesisenai",
+						"org",
+						"br"
+					],
+					"path": [
+						"v1",
+						"store",
+						"700"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Atualizar Loja",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FwaS1wcm92YS1mbHV0dGVyLmNvbS9pc3N1ZXIiLCJ1cG4iOiJqdWxpby5iLnRlc3RlMiIsImdyb3VwcyI6WyJBZG1pbiJdLCJpYXQiOjE3NDUzNTUwMjEsImV4cCI6MTc0Nzk0NzAyMSwianRpIjoiMzBiYWFkN2YtZGRlNy00NWM3LTkzZmUtZjNmYWExOTFkYjNjIn0.LXsuBY5gsBDr7WB8wWXcFuwAmfKThkmkSeP7420Mi9tAmkP0aQSMwkVWXEulf3a9UAoB4TCKkkLRcm1WZdFKNZ3T2983CC2WBxSEl01o4zhpq1E8zcj14_ozxKhf9RmZnBaVEF6A5KEC3OkqtQ38sVit-Kt9ZSnfYkpSHefnxM8p4k2nLJOCdJu8D1h4TSDz1svu-U8vE3SWqBM7Zou1oxHt4hN5MNtsxJq54f4l_qTEzwd4GkDpdsgd78gaaRLuJsZ08nai_jqAGXemR1khsQM1J-YXhQSc-ZloTmeWe2MELk9wq5F7GLAwRGGx3ZPSpl1sdgu70N7PHOEFhaH72g",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Minha Lojinha Super\",\n    \"slogan\": \"A melhor lojinha de todas!\",\n    \"banner\": \"NOVA_BASE64_AQUI\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api-flutter-prova.hml.sesisenai.org.br/v1/store/700",
+					"protocol": "https",
+					"host": [
+						"api-flutter-prova",
+						"hml",
+						"sesisenai",
+						"org",
+						"br"
+					],
+					"path": [
+						"v1",
+						"store",
+						"700"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
