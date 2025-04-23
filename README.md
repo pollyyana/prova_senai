@@ -1,13 +1,4 @@
 
-**⚠️ ATENÇÃO:**
-
-
-## 🌿 Branch Principal
-A branch `master` é a **branch principal** do projeto.  
-Nela estão as versões mais estáveis e representativas do app até o momento.
-
-Todas as novas funcionalidades e melhorias ainda estão em desenvolvimento.  
-Espero ter a oportunidade de apresentar mais detalhes em uma conversa técnica!
 
 # MyBookStore
 
